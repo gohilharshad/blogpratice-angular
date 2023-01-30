@@ -1,7 +1,86 @@
 <!-- <app-header></app-header> -->
- 
-<h1>This is angular project {{title}}</h1>
 
+
+
+<form [formGroup]="loginForm"  (ngSubmit)="loginUser()">
+
+	<input type="text" name="name" id="name" placeholder="Enter Name"  formControlName="user">
+	<br>
+	<span style="color: red;" *ngIf="user && user.invalid && user.touched">This fields is not valid</span>
+	<br>
+	<input type="password" name="email" id="email" placeholder="Enter password" formControlName="password">
+	<br>
+	<span style="color: red;" *ngIf="password && password.invalid && password.touched">This fields is not valid</span>
+	<br>
+	<button [disabled]="loginForm.invalid">Login</button>
+
+</form>
+
+
+
+<!-- <h1>This is blogs</h1> -->
+
+<!-- <h1>Hell</h1> -->
+<!-- 
+<input type="text" [(ngModel)]="name">
+
+{{name}} -->
+
+<!--  
+<ul *ngFor="let user of userDetials">
+	<app-register [item]="user" ></app-register>
+</ul> -->
+
+
+
+
+<!-- <input type="text" name="text" id="text" placeholder="Enter Task" #task>
+
+<button (click)="addTask(task.value)">Add Task</button>
+
+
+<ul *ngFor="let item of list">
+	<li >{{item.name}}</li>
+	<button (click)="removeTask(item.id)">remove</button>
+</ul> -->
+
+<!-- <h1>This is angular project {{title}}</h1>
+
+
+<section>
+	<div class="example-label">FAB</div>
+	<div class="example-button-row">
+	  <div class="example-flex-container">
+		<div class="example-button-container">
+		  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+			<mat-icon>delete</mat-icon>
+		  </button>
+		</div>
+		<div class="example-button-container">
+		  <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+			<mat-icon>bookmark</mat-icon>
+		  </button>
+		</div>
+		<div class="example-button-container">
+		  <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+			<mat-icon>home</mat-icon>
+		  </button>
+		</div>
+		<div class="example-button-container">
+		  <button mat-fab disabled aria-label="Example icon button with a heart icon">
+			<mat-icon>favorite</mat-icon>
+		  </button>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+
+
+
+<mat-slider min="1" max="5" step="0.5" value="1.5">
+	<input matSliderThumb>
+  </mat-slider>
 
 <p>
 	<ngb-alert [dismissible]="false">
@@ -49,6 +128,8 @@
 
 
 
+
+
 <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
     <table align="center" border="2">
         <tr>
@@ -71,14 +152,14 @@
 </form>
 <br>
 <hr>
-<br>
+<br> -->
 
 
 <!-- <ul>
-    <li *ngFor="let item of userData">{{item.name}}></li>
+    <li *ngFor="let item of userData">{{item.task}></li>
 </ul> -->
 
-<table align="center" border="2">
+<!-- <table align="center" border="2">
     <tr>
     <th>Name:</th>
     <th>Email</th>
@@ -91,7 +172,7 @@
 
 </tr>
 </table>
-
+ -->
 
 
 
