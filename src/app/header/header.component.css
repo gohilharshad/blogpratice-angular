@@ -1,0 +1,22 @@
+nav img{
+    height: 50px ;
+}
+nav{
+    padding: 10px;
+    background-color: skyblue;
+}
+ul{
+    float: right;
+    list-style-type: none;
+}
+
+ul li{
+    display: inline;
+    padding: 10px;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
